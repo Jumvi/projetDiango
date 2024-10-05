@@ -9,6 +9,13 @@ urlpatterns = [
     path('create/', views.create_employee, name='create_employee'),
     path('update/<int:id>/', views.update_employee, name='update_employee'),
     path('delete/<int:id>/', views.delete_employee, name='delete_employee'),
-    path('search/name/', views.get_employee_by_name, name='get_employee_by_name'),
-    path('search/province/', views.get_employee_by_province, name='get_employee_by_province'),
+    path('search/name/', views.get_employee_by_name, 
+         name='get_employee_by_name'),
+    path('search/province/', views.get_employee_by_province, 
+         name='get_employee_by_province'),
+    path('search/departement/', views.get_employee_by_department, 
+         name='get_employee_by_departmen'),
+    path('search/fonction/', views.get_employee_by_function, 
+         name='get_employee_by_function'),
+    
 ]

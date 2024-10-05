@@ -77,3 +77,17 @@ def get_employee_by_province(request):
     employees = Employee.objects.filter(province__icontains=province)
     data = list(employees.values())
     return JsonResponse(data, safe=False)
+
+
+def get_employee_by_department(request):
+    department = request.GET.get('department', '')
+    employees = Employee.objects.filter(department__icontains=department)
+    data = list(employees.values())
+    return JsonResponse(data, safe=False)
+
+
+def get_employee_by_function(request):
+    function = request.GET.get('function', '')
+    employees = Employee.objects.filter(function__icontains=function)
+    data = list(employees.values())
+    return JsonResponse(data, safe=False)
